@@ -27,7 +27,7 @@ jobs:
         run:
           go test -v
   test-linux:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         llvm: [14, 15, 16, 17]
