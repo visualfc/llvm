@@ -1,16 +1,22 @@
 # Go bindings to system LLVM
 
+[![Build Status](https://github.com/goplus/llvm/actions/workflows/go.yml/badge.svg)](https://github.com/goplus/llvm/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/goplus/llvm)](https://goreportcard.com/report/github.com/goplus/llvm)
+[![GoDoc](https://pkg.go.dev/badge/github.com/goplus/llvm.svg)](https://pkg.go.dev/github.com/goplus/llvm)
+<!--
+[![GitHub release](https://img.shields.io/github/v/tag/goplus/llvm.svg?label=release)](https://github.com/goplus/llvm/releases)
+[![Coverage Status](https://codecov.io/gh/goplus/llvm/branch/main/graph/badge.svg)](https://codecov.io/gh/goplus/llvm)
+-->
+
 This library provides bindings to a system-installed LLVM.
 
 Currently supported:
 
-  * LLVM 16, 15 and 14 from [apt.llvm.org](http://apt.llvm.org/) on Debian/Ubuntu.
-  * LLVM 16, 15 and 14 from Homebrew on macOS.
-  * LLVM 15 with a manually built LLVM through the `byollvm` build tag. You
-    need to set up `CFLAGS`/`LDFLAGS` etc yourself in this case.
+  * LLVM 17, 16, 15 and 14 from [apt.llvm.org](http://apt.llvm.org/) on Debian/Ubuntu.
+  * LLVM 17, 16, 15 and 14 from Homebrew on macOS.
+  * LLVM 15 with a manually built LLVM through the `byollvm` build tag. You need to set up `CFLAGS`/`LDFLAGS` etc yourself in this case.
 
-You can select the LLVM version using a build tag, for example `-tags=llvm14`
-to use LLVM 14.
+You can select the LLVM version using a build tag, for example `-tags=llvm14` to use LLVM 14.
 
 ## Usage
 
