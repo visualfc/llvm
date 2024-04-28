@@ -11,12 +11,18 @@ jobs:
     strategy:
       matrix:
         llvm: [14, 15, 16, 17]
+        go-version: [1.18.x, 1.21.x]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Update Homebrew
         if: matrix.llvm == 17 # needed as long as LLVM 17 is still fresh
         run: brew update
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go-version }}
       - name: Install LLVM
         run: HOMEBREW_NO_AUTO_UPDATE=1 brew install llvm@${{ matrix.llvm }}
       - name: Test LLVM ${{ matrix.llvm }}
