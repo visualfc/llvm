@@ -14,7 +14,7 @@ jobs:
       - name: Install Tools
         run: |
           curl -o llvm-18.1.6.src.tar.xz -L https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.6/llvm-18.1.6.src.tar.xz
-          tar -xJF llvm-18.1.6.src.tar.xz
+          tar -xf llvm-18.1.6.src.tar.xz
           ls
           mv llvm-18.1.6 llvm
 
