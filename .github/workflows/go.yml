@@ -53,3 +53,15 @@ jobs:
         if: matrix.llvm == 17
         run:
           go test -v
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup LLVM
+        uses: ZhongRuoyu/setup-llvm@v0
+        with:
+          llvm-version: 17
+      - name: Test
+        run:
+          go test -v
