@@ -58,10 +58,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup LLVM
-        uses: ZhongRuoyu/setup-llvm@v0
-        with:
-          llvm-version: 17
-      - name: Test
+      - name: Install Tools
         run:
-          go test -v
+          choco install --confirm git golang mingw make cmake ninja python
+
