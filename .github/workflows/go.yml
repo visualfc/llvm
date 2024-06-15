@@ -15,7 +15,6 @@ jobs:
         run: |
           curl -o llvm-18.1.6.src.tar.xz -L https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.6/llvm-18.1.6.src.tar.xz
           ls
-          tar xzf llvm-18.1.6.src.tar.xz
+          tar -xvf llvm-18.1.6.src.tar.xz
           ls
-          mv llvm-18.1.6 llvm
 
